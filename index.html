@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Danger — Tus partidas, bajo control</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        :root {
+            --bg: #0a0a0f;
+            --card: #12121a;
+            --accent: #ff4466;
+            --accent-soft: #ff446620;
+            --text: #e5e5e5;
+            --muted: #888899;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        .hero h1 span {
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .btn {
+            padding: 14px 32px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 68, 102, 0.25);
+        }
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid #2a2a3a;
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent);
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--card);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #222233;
+            transition: border-color 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--accent);
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .step {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .download-card {
+            background: var(--card);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #222233;
+        }
+        .download-card h3 {
+            margin-bottom: 8px;
+        }
+        .download-card p {
+            color: var(--muted);
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #222233;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">⚠️ Save Danger</div>
+            <nav>
+                <a href="#caracteristicas">Características</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#descargas">Descargas</a>
+                <a href="#precios">Planes</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Tus partidas y tu consola, <span>a un clic de distancia</span></h1>
+            <p>Conecta con tu consola desde tu red local, respalda tus progresos, edita tus partidas y restáuralas de forma segura. Sin modificaciones en la consola.</p>
+            <div class="download-buttons">
+                <a href="#" class="btn btn-primary">⬇️ Versión para Windows</a>
+                <a href="#" class="btn btn-secondary">🍏 macOS</a>
+                <a href="#" class="btn btn-secondary">🐧 Linux</a>
+            </div>
+        </section>
+
+        <section class="section" id="caracteristicas">
+            <h2>¿Qué puedes hacer con Save Danger?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🔍 Detección automática</h3>
+                    <p>La aplicación encuentra tu consola automáticamente en tu red doméstica. No necesitas configurar direcciones IP ni usar cables especiales.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Consola intacta</h3>
+                    <p>No requiere modificar el sistema de tu consola. Todo funciona mediante el sistema de transferencia de datos oficial del fabricante.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>☁️ Almacenamiento privado</h3>
+                    <p>Todas tus partidas se guardan en un espacio privado protegido con tu cuenta. Solo tú puedes acceder a ellas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✏️ Edición sencilla</h3>
+                    <p>Usa ajustes predefinidos o establece los valores que desees. Modifica atributos, objetos y más con controles simples.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Seguridad ante todo</h3>
+                    <p>Tus archivos originales nunca se sobrescriben. Cada modificación se adapta a tu cuenta de usuario antes de enviarla de vuelta.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Funciona en todos los sistemas</h3>
+                    <p>Disponible para Windows, macOS y Linux. Usa el equipo que prefieras, con el sistema operativo que ya conoces.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="como-funciona">
+            <h2>En solo 3 pasos</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Instalar e iniciar sesión</h3>
+                        <p>Descarga la aplicación en tu ordenador, instálala e inicia sesión con tu cuenta de Save Danger.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Extrae tu partida</h3>
+                        <p>Conecta tu consola a la misma red Wi-Fi que tu equipo. Selecciona "Importar desde consola" y espera a que se complete la transferencia.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Edita y disfruta</h3>
+                        <p>Realiza los cambios que desees. La aplicación adapta el archivo a tu cuenta y lo envía de vuelta a tu consola listo para jugar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="descargas">
+            <h2>Descarga Save Danger</h2>
+            <div class="downloads-grid">
+                <div class="download-card">
+                    <h3>🪟 Windows</h3>
+                    <p>Instalador · v1.5.33 · 64-bit</p>
+                    <a href="#" class="btn btn-primary">Descargar</a>
+                </div>
+                <div class="download-card">
+                    <h3>🍏 macOS</h3>
+                    <p>Apple Silicon & Intel · v1.5.32</p>
+                    <a href="#" class="btn btn-primary">Descargar</a>
+                </div>
+                <div class="download-card">
+                    <h3>🐧 Linux</h3>
+                    <p>.deb / AppImage · v1.5.32</p>
+                    <a href="#" class="btn btn-primary">Descargar</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>⚠️ Save Danger — Tus partidas, bajo tu control</p>
+            <p style="margin-top: 8px;">Este es un ejemplo de página web creada con fines demostrativos. No está asociada con ningún producto comercial.</p>
+        </footer>
+    </div>
+</body>
+</html>
